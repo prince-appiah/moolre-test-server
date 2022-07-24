@@ -1,0 +1,60 @@
+{
+  "swagger": "2.0",
+  "basePath": "/api/v1",
+  "host": "localhost:5000",
+  "schemes": ["http"],
+  "info": {
+    "version": "1.0.0",
+    "title": "Moolre Test API"
+  },
+  "paths": {
+    "/products": {
+      "get": {
+        "description": "Get all products",
+        "responses": {
+          "200": {
+            "description": "Success",
+            "schema": {
+              "type": "array",
+              "items": {
+                "type": "object",
+                "properties": {
+                  "name": {
+                    "type": "string"
+                  },
+                  "price": {
+                    "type": "number"
+                  },
+                  "image": {
+                    "type": "string"
+                  }
+                }
+              }
+            }
+          }
+        }
+      },
+      "post": {
+        "description": "Create new product/item",
+        "responses": {
+          "201": {
+            "description": "Created",
+            "schema": {
+              "type": "object"
+            }
+          }
+        }
+      }
+    },
+    "/payment": {
+      "post": {
+        "description": "Create payment",
+        "responses": {
+          "201": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  }
+}
