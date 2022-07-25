@@ -6,9 +6,10 @@ const swaggerDoc = require("./swagger.json");
 
 const app = express();
 
-app.use(
-  cors({ origin: ["http://localhost:3000", "https://moolre-test.web.app"] })
-);
+// app.use(
+//   cors({ origin: ["http://localhost:3000", "https://moolre-test.web.app"] })
+// );
+app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(
